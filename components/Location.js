@@ -7,9 +7,10 @@ const Location = ({ data, location, setMessage }) => {
     if (!foundCity) {
       setMessage("No location");
       return "";
+    } else {
+      setMessage("");
+      return <WeatherCard data={foundCity} />;
     }
-    return <WeatherCard data={foundCity} />;
   }
 };
-
 export default Location;
